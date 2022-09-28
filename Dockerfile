@@ -20,5 +20,5 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 EXPOSE 80
 
 ## Step 5:
-# Run madlib.py at container launch
-CMD ["python", "madlib.py"]
+# Run app.py at container launch
+CMD ["python", "app.py"]
