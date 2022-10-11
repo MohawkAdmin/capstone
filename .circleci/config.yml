@@ -32,7 +32,7 @@ jobs:
       - run:
           name: install docker
           command: |
-            curl -sSL https://get.docker.com/ | sudo sh
+            curl -sSL https://get.docker.com/
 
       # run lint!
       - run:
