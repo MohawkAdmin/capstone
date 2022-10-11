@@ -39,5 +39,4 @@ jobs:
       - run:
           name: push to Docker
           command: |
-            . venv/bin/activate
             ./upload_docker.sh
