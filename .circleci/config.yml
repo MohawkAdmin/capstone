@@ -39,4 +39,5 @@ jobs:
       - run:
           name: push to Docker
           command: |
-            ./test_script.sh
+            pwd
+#            # ./test_script.sh
