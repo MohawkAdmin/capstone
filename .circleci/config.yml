@@ -34,3 +34,10 @@ jobs:
           command: |
             . venv/bin/activate
             make lint 
+
+      #push to DockerHub
+      - run:
+          name: push to Docker
+          command: |
+            . venv/bin/activate
+            ./upload_docker.sh
