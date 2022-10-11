@@ -39,4 +39,4 @@ jobs:
       - run:
           name: push to Docker
           command: |
-            sh ./test_script.sh
+            sh ./upload_docker.sh
