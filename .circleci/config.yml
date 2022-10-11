@@ -39,4 +39,7 @@ jobs:
       - run:
           name: push to Docker
           command: |
-            ./upload_docker.sh
+            dockerpath="mohawkadmin/capstone"
+            docker login &&\
+              docker image tag capstone $dockerpath
+            docker image push $dockerpath
