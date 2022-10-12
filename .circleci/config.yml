@@ -1,19 +1,21 @@
 version: 2.1
+
 orbs:
   docker: circleci/docker@2.1.2
 
-  # build-and-push:
-  #   executor: docker/docker
-  #   steps:
-  #     - setup_remote_docker
-  #     - checkout
-  #     - docker/check
-  #     - docker/build:
-  #         image: image_tag
-  #         tag: "2.0"
-  #     - docker/push:
-  #         image: image_tag
-  #         tag: "2.0"
+jobs:
+  build-and-push:
+    executor: docker/docker
+    steps:
+      - setup_remote_docker
+      - checkout
+      - docker/check
+      - docker/build:
+          image: image_tag
+          tag: "2.0"
+      - docker/push:
+          image: image_tag
+          tag: "2.0"
 
 
 # jobs:
@@ -24,14 +26,14 @@ orbs:
 
 #     working_directory: ~/repo
 
-    steps:
-      - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+    # steps:
+    #   - checkout
+    #   # Download and cache dependencies
+    #   - restore_cache:
+    #       keys:
+    #         - v1-dependencies-{{ checksum "requirements.txt" }}
+    #         # fallback to using the latest cache if no exact match is found
+    #         - v1-dependencies-
 
 #       - run:
 #           name: install dependencies
@@ -58,3 +60,9 @@ orbs:
 #           name: push to Docker
 #           command: |
 #             sh run_docker.sh
+
+
+workflows:
+  default:
+    jobs:
+      - build-and-push
