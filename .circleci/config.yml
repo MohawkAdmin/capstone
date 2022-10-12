@@ -35,7 +35,7 @@ jobs:
           image: image_tag
           tag: "capstone"
       - docker/push:
-          image: image_tag
+          image: capstone
           tag: "capstone"
 
 
