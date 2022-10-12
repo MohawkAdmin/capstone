@@ -32,10 +32,10 @@ jobs:
 
 #      - docker/check
       - docker/build:
-          image: capstone
+          image: mohawkadmin/capstone
           tag: "2.0"
       - docker/push:
-          image: capstone
+          image: mohawkadmin/capstone
           tag: "2.0"
 
 
