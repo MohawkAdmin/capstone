@@ -2,18 +2,18 @@ version: 2.1
 orbs:
   docker: circleci/docker@2.1.2
 
-  build-and-push:
-    executor: docker/docker
-    steps:
-      - setup_remote_docker
-      - checkout
-      - docker/check
-      - docker/build:
-          image: image_tag
-          tag: "2.0"
-      - docker/push:
-          image: image_tag
-          tag: "2.0"
+  # build-and-push:
+  #   executor: docker/docker
+  #   steps:
+  #     - setup_remote_docker
+  #     - checkout
+  #     - docker/check
+  #     - docker/build:
+  #         image: image_tag
+  #         tag: "2.0"
+  #     - docker/push:
+  #         image: image_tag
+  #         tag: "2.0"
 
 
 # jobs:
