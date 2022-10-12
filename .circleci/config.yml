@@ -30,7 +30,10 @@ jobs:
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
 
-#      - docker/check
+      - docker/check
+          docker-username: mohawkadmin
+          docker-password: M0hawk@123
+          
       - docker/build:
           image: mohawkadmin/capstone
           tag: "2.0"
