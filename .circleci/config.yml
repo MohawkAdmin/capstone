@@ -32,7 +32,7 @@ jobs:
 
 #      - docker/check
       - docker/build:
-          image: image_tag
+          image: capstone
           tag: "capstone"
       - docker/push:
           image: capstone
