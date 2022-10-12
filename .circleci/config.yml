@@ -33,10 +33,10 @@ jobs:
 #      - docker/check
       - docker/build:
           image: image_tag
-          tag: "2.0"
+          tag: "capstone"
       - docker/push:
           image: image_tag
-          tag: "2.0"
+          tag: "capstone"
 
 
 # jobs:
