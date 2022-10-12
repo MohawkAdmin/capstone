@@ -31,9 +31,9 @@ jobs:
 
 
       - docker/check
-          docker-username: mohawkadmin
-          docker-password: M0hawk@123
-          
+          docker-username: "mohawkadmin"
+          docker-password: "M0hawk@123"
+
       - docker/build:
           image: mohawkadmin/capstone
           tag: "2.0"
